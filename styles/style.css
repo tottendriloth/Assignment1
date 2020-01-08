@@ -1,4 +1,6 @@
-
+:root{
+    --totalimages: 4;
+}
 
 /* body */
 body{
@@ -72,53 +74,55 @@ body{
     text-align: center;
     margin-top: 1%;
 }
-/* Profile Picture */
-.profilepic{
-    margin-top: 5%;
-    transition: all 1s ease;
-    border-radius: 20% 100% 20% 100%;
 
+
+/* Slide Show*/
+.slideshow{
+    display: inline-block;
+    text-align: center;
+
+    transform: translate(0);
+    overflow: hidden;
     width: 250px;
     height: 250px;
-
-    animation-name: rubber;
-    animation-duration: .5s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-    animation-play-state: paused;
-
-    filter: grayscale(100%);
-}
-
-.profilepic:hover{
-
-    animation-play-state: running;
-}
-
-/* Tests*/
-.slideshow{
-    display: block;
-    transform: translate(0);
 }
 
 .slideshow img{
+    animation: slide 4s infinite;
     position: fixed;
     display:block;
     top: 0;
     left: 0;
-}
-
-.second img{
-    margin-top: 5%;
-
-    width: 250px;
-    height: 250px;
-    filter: grayscale(0%);
-
     z-index: -1;
 }
-/* Media Queries */
+.profilepic{
+    margin-top: 5%;
+    width: 250px;
+    height: 250px;
+}
+.first img{
+    filter: brightness(25%);
+    --direction: translate(-100000px, 0px);
+    animation-delay: 0s;
+}
+.second img{
+    filter: brightness(50%);
+    --direction: translate(0px, -100000px);
+    animation-delay: 1s;
+}
+.third img{
+    filter: brightness(75%);
+    --direction: translate(100000px, 0px);
+    animation-delay: 2s;
+}
+.fourth img{
+    filter: brightness(100%);
+    --direction: translate(0px, 100000px);
+    animation-delay: 3s;
+}
 
+
+/* Media Queries */
 @media (max-width: 500px){
     .topnav a{
         font-size: 5vw;
@@ -128,12 +132,15 @@ body{
 
 
 /* Animation*/
-@keyframes rubber{
-    0%, 100%{
-        border-radius: 10% 100% 10% 100%;
+
+@keyframes slide{
+    0%{
+        transform: var(--direction);
+        z-index: var(--totalimages);
     }
     50%{
-        border-radius: 100% 10% 100% 10%;
+        transform: translate(0px, 0px);
+        z-index: 1;
     }
 }
 
