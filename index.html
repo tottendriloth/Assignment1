@@ -1,37 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--Provides a liknk for the font-awesome icons used later on-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <!--Imports the styles from the css file-->
     <link rel="stylesheet" href="styles/style.css">
+    <!-- Set the title in the tab-->
     <title>Landing Page</title>
 </head>
 <body>
-    <div class="topnav">
+    <!--Header for storing the nav bar-->
+    <header class="topnav">
+        <!--Background for nav bar is a video-->
         <video class="navvideo" autoplay muted loop>
-            <source src="assets/navvid.mp4" type="video/mp4">
+            <source src="assets/videos/navvid.mp4" type="video/mp4">
         </video>
+        <!--The actual nav bar split into the 4 pages-->
         <nav>
             <ul>
                 <li class="active"> <a href="#"> Home </a></li>
                 <li class="notactive"> <a href="Portfolio.html"> Portfolio </a></li>
                 <li class="notactive"> <a href="CV.html"> CV </a></li>
-                <li class="notactive"> <a href="Contact.html"> Contact </a></li class="notactive">
+                <li class="notactive"> <a href="Contact.html"> Contact </a></li>
             </ul>
-    </nav>
-
-
+        </nav>
+        </header>
+        <!-- The container for the main bulk of the code-->
     <div class="container">
+        <!-- To make the code more interesting i added a slide show effect on the image going from light to dark-->
         <div class="slideshow">
-            <span class="first"><img src="assets/me.jpg" alt="profile-pic" class="profilepic"></span>
-            <span class="second"><img src="assets/me.jpg" alt="profile-pic" class="profilepic"></span>
-            <span class="third"><img src="assets/me.jpg" alt="profile-pic" class="profilepic"></span>
-            <span class="fourth"><img src="assets/me.jpg" alt="profile-pic" class="profilepic"></span>
+            <span class="first"><img src="assets/images/me.jpg" alt="profile-pic" class="profilepic"></span>
+            <span class="second"><img src="assets/images/me.jpg" alt="profile-pic" class="profilepic"></span>
+            <span class="third"><img src="assets/images/me.jpg" alt="profile-pic" class="profilepic"></span>
+            <span class="fourth"><img src="assets/images/me.jpg" alt="profile-pic" class="profilepic"></span>
         </div>
-
-        <h1> Hello Im Ben </h1>
+        <!--The text here is basic to not over clutter the landing page, most information is found on other pages.-->
+        <div class="readable">        
+            <h1> Hello Im Ben!! </h1>
+        <p>I am a computing student currently studying at Northampton Uni.</p>  
+        </div>
     </div>
-</div>
+        <!-- This is the footer used on all pages that provides links to my external sites.-->
+    <footer>
+
+        <video class="bottombar" autoplay muted loop>
+            <!-- Same video from nav bar with same usage-->
+            <source src="assets/videos/navvid.mp4" type="video/mp4">
+        </video>
+        <div class="icons">
+            <!-- A list to aid in displaying inline-->
+            <ul class="iconlinks">
+                <!-- Icon tag linking to font awesom icons for github and linkedin -->
+                <li> <a href="https://github.com/tottendriloth" class="footericon"> <i class="fa fa-github fa-3x" aria-hidden="true"></i> </a> </li>
+                <li> <a href="https://www.linkedin.com/in/benjamin-owen-648ba2177/" class="footericon"> <i class="fa fa-linkedin fa-3x"></i> </a> </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
